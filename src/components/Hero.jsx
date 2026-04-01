@@ -19,7 +19,7 @@ const Hero = ({ setActiveTab }) => {
         </div>
       </div>
       <div className="lg:w-1/2">
-        <img src="https://ibb.co.com/hRgB5vYj" className="rounded-[40px] shadow-2xl" alt="Hero" />
+        <img src="https://i.ibb.co.com/tMHqf5Lt/banner.png" className="rounded-[40px] shadow-2xl" alt="Hero" />
       </div>
     </header>
   );
