@@ -8,7 +8,7 @@ export const products = [
     tag: "Best Seller",
     tagType: "popular",
     features: ["Unlimited AI generations", "50+ templates", "Grammar checker"],
-    image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
+    image: "src/assets/products/writing_2327400 1.png",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const products = [
     tag: "Popular",
     tagType: "new",
     features: ["Vector assets", "Monthly updates", "Commercial license"],
-    icon: "🎨"
+    image: "src/assets/products/design-tool.png",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const products = [
     tag: "New",
     tagType: "best seller",
     features: ["Keyword research", "Backlink checker", "Daily reports"],
-    icon: "🔍"
+    image: "src/assets/products/Group.png",
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ export const products = [
     tag: "Secure",
     tagType: "popular",
     features: ["AES-256 Encryption", "Zero-Knowledge", "Cloud sync"],
-    icon: "🛡️"
+    image: "src/assets/products/operation.png",
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ export const products = [
     tag: "New",
     tagType: "new",
     features: ["Custom graphs", "API access", "Export to CSV"],
-    icon: "📊"
+    image: "src/assets/products/portfolio.png",
   },
   {
     id: 6,
@@ -63,6 +63,6 @@ export const products = [
     tag: "Best Seller",
     tagType: "best seller",
     features: ["A/B Testing", "Smart segmentation", "Spam checker"],
-    icon: "✉️"
+    image: "src/assets/products/social-media.png",
   }
 ];

@@ -55,7 +55,7 @@ function App() {
               </div>
             </div>
 
-            /* Product Cards Grid with Shadow */
+            {/* Product Cards Grid with Shadow */}
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {products.map((item) => (
@@ -65,11 +65,11 @@ function App() {
                   <span className={`absolute top-8 right-8 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest flex items-center gap-1.5 border shadow-sm ${
                     item.tag === "Best Seller" ? "border-[#FB923C]/30 bg-[#FFF7ED] text-[#EA580C]" : "border-purple-200 bg-purple-50 text-[#7C3AED]"
                   }`}>
-                    {item.tag === "Best Seller" && <span>⭐</span>} {item.tag}
+                    {item.tag === "Best Seller" && <span></span>} {item.tag}
                   </span>
 
                   {/* Icon */}
-                  <div className="mb-8 bg-slate-50 w-20 h-20 flex items-center justify-center rounded-3xl group-hover:bg-purple-50 transition-colors p-3 shadow-inner">
+                  <div className="mb-3 bg-slate-50 w-15 h-15 flex items-center justify-center rounded-3xl group-hover:bg-purple-50 transition-colors p-3 shadow-inner">
                     <img src={item.image} alt={item.name} className="w-full h-full object-contain" />
                   </div>
 
