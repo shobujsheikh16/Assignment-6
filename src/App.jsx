@@ -50,6 +50,9 @@ function App() {
           <>
             <div className="text-center mb-16 pt-10">
               <h2 className="text-5xl font-black text-[#1E293B] mb-4">Premium Digital Tools</h2>
+               <p className="text-gray-500 font-medium mb-20">Choose from our curated collection of premium digital products designed
+                <br />
+                to boost your productivity and creativity.</p>
               <div className="bg-gray-200 p-1.5 rounded-full inline-flex gap-2">
                 <button onClick={() => setActiveTab('product')} className="bg-[#7C3AED] text-white px-10 py-3 rounded-full font-bold shadow-lg">Products</button>
                 <button onClick={() => setActiveTab('cart')} className="text-gray-500 px-10 py-3 rounded-full font-bold">Cart ({cart.length})</button>
