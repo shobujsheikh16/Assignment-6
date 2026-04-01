@@ -39,6 +39,7 @@ function App() {
       <ToastContainer position="top-right" autoClose={1500} />
 
       <Navbar cartCount={cart.length} setActiveTab={setActiveTab} />
+      
       <div className={activeTab === 'cart' ? 'hidden' : 'block'}>
         <Hero setActiveTab={setActiveTab} />
         <Stats />
@@ -55,8 +56,6 @@ function App() {
               </div>
             </div>
 
-            {/* Product Cards Grid with Shadow */}
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {products.map((item) => (
                 <div key={item.id} className="bg-white border border-gray-50 rounded-[35px] p-8 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_50px_-12px_rgba(124,58,237,0.15)] transition-all duration-500 relative group border-t-2 border-transparent hover:border-[#7C3AED]/20">
@@ -65,15 +64,15 @@ function App() {
                   <span className={`absolute top-8 right-8 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest flex items-center gap-1.5 border shadow-sm ${
                     item.tag === "Best Seller" ? "border-[#FB923C]/30 bg-[#FFF7ED] text-[#EA580C]" : "border-purple-200 bg-purple-50 text-[#7C3AED]"
                   }`}>
-                    {item.tag === "Best Seller" && <span></span>} {item.tag}
+                    {item.tag}
                   </span>
 
-                  {/* Icon Wrapper */}
-                <div className="mb-6 bg-slate-50 w-16 h-16 flex items-center justify-center rounded-[24px] group-hover:bg-purple-50 transition-all duration-300 shadow-inner border border-gray-100">
-                   <span className="text-4xl group-hover:scale-110 transition-transform duration-100 select-none">
-                   {item.icon}
-                   </span>
-                </div>
+                  {/* FIXED: Emoji Icon Wrapper (No img tag) */}
+                  <div className="mb-6 bg-slate-50 w-16 h-16 flex items-center justify-center rounded-[24px] group-hover:bg-purple-50 transition-all duration-300 shadow-inner border border-gray-100">
+                     <span className="text-4xl group-hover:scale-110 transition-transform duration-200 select-none">
+                       {item.icon}
+                     </span>
+                  </div>
 
                   {/* Content */}
                   <h3 className="text-2xl font-black mb-3">{item.name}</h3>
@@ -86,7 +85,9 @@ function App() {
 
                   <ul className="space-y-4 mb-10">
                     {item.features.map((f, i) => (
-                      <li key={i} className="flex items-center gap-3 text-sm font-bold text-gray-600"><span className="text-green-500 font-black">✓</span> {f}</li>
+                      <li key={i} className="flex items-center gap-3 text-sm font-bold text-gray-600">
+                        <span className="text-green-500 font-black">✓</span> {f}
+                      </li>
                     ))}
                   </ul>
 
@@ -122,15 +123,16 @@ function App() {
                   {cart.map(item => (
                     <div key={item.cartId} className="flex justify-between items-center bg-slate-50 p-6 rounded-3xl border border-gray-100 transition-all hover:bg-white hover:shadow-md">
                       <div className="flex gap-6 items-center">
-                        <div className="bg-white w-16 h-16 flex items-center justify-center rounded-2xl shadow-sm p-2">
-                           <img src={item.image} alt={item.name} className="w-full h-full object-contain" />
+                        {/* FIXED: Cart Emoji Icon */}
+                        <div className="bg-white w-16 h-16 flex items-center justify-center rounded-2xl shadow-sm text-3xl">
+                           {item.icon}
                         </div>
                         <div>
                           <p className="font-black text-xl text-gray-800">{item.name}</p>
                           <p className="font-bold text-[#7C3AED] text-lg">${item.price}</p>
                         </div>
                       </div>
-                      <button onClick={() => handleRemove(item.cartId, item.name)} className="text-red-500 font-bold px-4 hover:text-red-700">Remove</button>
+                      <button onClick={() => handleRemove(item.cartId, item.name)} className="text-red-500 font-bold px-4 hover:underline">Remove</button>
                     </div>
                   ))}
                   <div className="pt-10 border-t border-gray-100">
