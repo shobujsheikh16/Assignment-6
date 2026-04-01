@@ -68,10 +68,12 @@ function App() {
                     {item.tag === "Best Seller" && <span></span>} {item.tag}
                   </span>
 
-                  {/* Icon */}
-                  <div className="mb-3 bg-slate-50 w-15 h-15 flex items-center justify-center rounded-3xl group-hover:bg-purple-50 transition-colors p-3 shadow-inner">
-                    <img src={item.image} alt={item.name} className="w-full h-full object-contain" />
-                  </div>
+                  {/* Icon Wrapper */}
+                <div className="mb-6 bg-slate-50 w-16 h-16 flex items-center justify-center rounded-[24px] group-hover:bg-purple-50 transition-all duration-300 shadow-inner border border-gray-100">
+                   <span className="text-4xl group-hover:scale-110 transition-transform duration-100 select-none">
+                   {item.icon}
+                   </span>
+                </div>
 
                   {/* Content */}
                   <h3 className="text-2xl font-black mb-3">{item.name}</h3>
